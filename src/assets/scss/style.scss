@@ -1,9 +1,14 @@
-@import "normalize.scss";
+@use 'normalize.scss';
+@use '_header';
+@use '_mainpage';
+@use '_pages';
+@use '_footer';
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Merienda";
+  font-family: 'Merienda';
   outline: none;
 }
 body {
@@ -29,8 +34,3 @@ body {
   margin-top: 60px;
   margin-bottom: 60px;
 }
-
-@import "header";
-@import "mainpage";
-@import "pages";
-@import "footer";
