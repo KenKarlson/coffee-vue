@@ -87,6 +87,7 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ShopCard from "@/components/ShopCard.vue";
+
 export default {
   components: { NavBarComponent, ShopCard },
 };

@@ -21,7 +21,14 @@ const router = new VueRouter({
       component: () => import("@/views/ContactsView.vue"),
     },
     {
-      path: "/reservation",
+      path: "/goodspage",
+      name: "For you pleasure",
+      component: () => import("@/views/ForYouPleasureView.vue"),
+    },
+    {
+      path: "/thanks",
+      name: "Thanks",
+      component: () => import("@/views/ThanksView.vue"),
     },
   ],
 });
