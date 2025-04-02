@@ -15,19 +15,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img
-              class="shop__girl"
-              src="@/assets/img/coffee_girl.jpg"
-              alt="girl"
-            />
+            <img class="shop__girl" src="@/assets/img/coffee_girl.jpg" alt="girl" />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img
-              class="beanslogo"
-              src="@/assets/logo/Beans_logo_dark.svg"
-              alt="Beans logo"
-            />
+            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
             <div class="shop__text">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible.
@@ -48,12 +40,7 @@
           <div class="col-lg-4 offset-2">
             <form action="#" class="shop__search">
               <label class="shop__search-label" for="filter">Looking for</label>
-              <input
-                id="filter"
-                type="text"
-                placeholder="start typing here..."
-                class="shop__search-input"
-              />
+              <input id="filter" type="text" placeholder="start typing here..." class="shop__search-input" />
             </form>
           </div>
           <div class="col-lg-4">
@@ -90,5 +77,8 @@ import ShopCard from "@/components/ShopCard.vue";
 
 export default {
   components: { NavBarComponent, ShopCard },
+  data() {
+    return {}
+  }
 };
 </script>
