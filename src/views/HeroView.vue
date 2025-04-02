@@ -72,6 +72,30 @@ import ProductCard from "@/components/ProductCard.vue";
 import router from "@/router";
 export default {
   components: { NavBarComponent, ProductCard },
+  data() {
+    return {
+      bestsellers: [
+        {
+          id: 0,
+          name: '',
+          price: '10.73',
+          image: 'coffee1.jpg'
+        },
+        {
+          id: 1,
+          name: '',
+          price: '15.99',
+          image: 'coffee2.jpg'
+        },
+        {
+          id: 2,
+          name: '',
+          price: '6.99',
+          image: 'coffee3.jpg'
+        }
+      ]
+    }
+  }
 };
 </script>
 <style></style>

@@ -5,3 +5,10 @@
     <div class="best__item-price">6.99$</div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+
+  }
+};
+</script>
