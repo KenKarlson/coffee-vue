@@ -57,12 +57,12 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <ShopCard />
-              <ShopCard />
-              <ShopCard />
-              <ShopCard />
-              <ShopCard />
-              <ShopCard />
+              <ShopCard :name="coffee[0].name" :price="coffee[0].price" :image="coffee[0].image" />
+              <ShopCard :name="coffee[1].name" :price="coffee[1].price" :image="coffee[1].image" />
+              <ShopCard :name="coffee[2].name" :price="coffee[2].price" :image="coffee[2].image" />
+              <ShopCard :name="coffee[3].name" :price="coffee[3].price" :image="coffee[3].image" />
+              <ShopCard :name="coffee[4].name" :price="coffee[4].price" :image="coffee[4].image" />
+              <ShopCard :name="coffee[5].name" :price="coffee[5].price" :image="coffee[5].image" />
             </div>
           </div>
         </div>
@@ -78,7 +78,52 @@ import ShopCard from "@/components/ShopCard.vue";
 export default {
   components: { NavBarComponent, ShopCard },
   data() {
-    return {}
+    return {
+      coffee: [
+        {
+          id: 0,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 1,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 2,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 3,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 4,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 5,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+      ]
+    }
   }
 };
 </script>

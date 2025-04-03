@@ -15,19 +15,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img
-              class="shop__girl"
-              src="@/assets/img/coffee_goods.jpg"
-              alt="girl"
-            />
+            <img class="shop__girl" src="@/assets/img/coffee_goods.jpg" alt="girl" />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img
-              class="beanslogo"
-              src="@/assets/logo/Beans_logo_dark.svg"
-              alt="Beans logo"
-            />
+            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
             <div class="shop__text">
               Extremity sweetness difficult behaviour he of. On disposal of as
               landlord horrible.
@@ -49,12 +41,12 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <ShopCard />
-              <ShopCard />
-              <ShopCard />
-              <ShopCard />
-              <ShopCard />
-              <ShopCard />
+              <ShopCard :name="goods[0].name" :price="goods[0].price" :image="goods[0].image" />
+              <ShopCard :name="goods[1].name" :price="goods[1].price" :image="goods[1].image" />
+              <ShopCard :name="goods[2].name" :price="goods[2].price" :image="goods[2].image" />
+              <ShopCard :name="goods[3].name" :price="goods[3].price" :image="goods[3].image" />
+              <ShopCard :name="goods[4].name" :price="goods[4].price" :image="goods[4].image" />
+              <ShopCard :name="goods[5].name" :price="goods[5].price" :image="goods[5].image" />
             </div>
           </div>
         </div>
@@ -72,5 +64,54 @@ export default {
     NavBarComponent,
     ShopCard,
   },
+  data() {
+    return {
+      goods: [
+
+        {
+          id: 0,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 1,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 2,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 3,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 4,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+        {
+          id: 5,
+          name: '',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+          country: ''
+        },
+      ]
+    }
+  }
 };
 </script>

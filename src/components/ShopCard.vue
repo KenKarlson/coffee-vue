@@ -1,8 +1,38 @@
 <template>
   <div class="shop__item">
-    <img src="@/assets/img/coffee-3.jpg" alt="coffee" />
-    <div class="shop__item-title">Solimo Coffee Beans 2kg</div>
-    <div class="shop__item-country">Brazil</div>
-    <div class="shop__item-price">10.73$</div>
+    <img :src="require(`@/assets/img/${image}`)" :alt="image" />
+    <div class="shop__item-title">{{ name }}</div>
+    <div class="shop__item-country">{{ country }}</div>
+    <div class="shop__item-price">{{ price }}$</div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    // здесь объявляются наши пропсы :)
+    name: {
+      type: String,
+      required: true
+    },
+    price: {
+      type: Number,
+      required: true
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    country: {
+      type: String,
+      required: false,
+      default: 'Russia'
+    }
+
+  },
+  data() {
+    return {
+      // здесь объявляются наши реактивные данные
+    }
+  }
+}
+</script>

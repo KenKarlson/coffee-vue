@@ -55,9 +55,9 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              <ProductCard :name="bestsellers[0].name" :price="bestsellers[0].price" :image="bestsellers[0].image" />
+              <ProductCard :name="bestsellers[1].name" :price="bestsellers[1].price" :image="bestsellers[1].image" />
+              <ProductCard :name="bestsellers[2].name" :price="bestsellers[2].price" :image="bestsellers[2].image" />
             </div>
           </div>
         </div>
@@ -77,21 +77,21 @@ export default {
       bestsellers: [
         {
           id: 0,
-          name: '',
-          price: '10.73',
-          image: 'coffee1.jpg'
+          name: 'AROMISTICO Coffee 1kg',
+          price: 10.73,
+          image: 'coffee-1.jpg'
         },
         {
           id: 1,
-          name: '',
-          price: '15.99',
-          image: 'coffee2.jpg'
+          name: 'BRASIL Monkey',
+          price: 15.99,
+          image: 'coffee-2.jpg'
         },
         {
           id: 2,
-          name: '',
-          price: '6.99',
-          image: 'coffee3.jpg'
+          name: 'ASERTYB Coffee',
+          price: 6.99,
+          image: 'coffee-3.jpg'
         }
       ]
     }
