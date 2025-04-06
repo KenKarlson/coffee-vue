@@ -4,23 +4,7 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
-            <li class="footer__item">
-              <router-link to="/">
-                <img
-                  :src="require(`@/assets/logo/${links[0].icon}`)"
-                  :alt="links[0].icon"
-                />
-              </router-link>
-            </li>
-            <li class="footer__item">
-              <router-link :to="links[1].link">{{ links[1].text }}</router-link>
-            </li>
-            <li class="footer__item">
-              <router-link :to="links[2].link">{{ links[2].text }}</router-link>
-            </li>
-            <li class="footer__item">
-              <router-link :to="links[3].link">{{ links[3].text }}</router-link>
-            </li>
+            <nav-item></nav-item>
           </ul>
         </div>
       </div>
@@ -33,8 +17,10 @@
   </footer>
 </template>
 <script>
+import NavItem from './NavItem.vue';
 export default {
   name: 'FooterComponent',
+  components: { NavItem },
   data() {
     return {
       beanslogo: 'Beans_logo_dark.svg',
