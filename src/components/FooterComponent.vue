@@ -4,7 +4,26 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <ul class="footer d-flex flex-wrap">
-            <nav-item></nav-item>
+            <router-link
+              tag="li"
+              v-for="(link, index) in links"
+              :key="index"
+            ></router-link>
+            <nav-item
+              classLink="footer__item"
+              :link="links[1].link"
+              :text="links[1].text"
+            ></nav-item>
+            <nav-item
+              classLink="footer__item"
+              :link="links[2].link"
+              :text="links[2].text"
+            ></nav-item>
+            <nav-item
+              classLink="footer__item"
+              :link="links[3].link"
+              :text="links[3].text"
+            ></nav-item>
           </ul>
         </div>
       </div>

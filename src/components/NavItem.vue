@@ -1,6 +1,6 @@
 <template>
-  <li class="footer__item">
-    <ro uter-link :to="link">{{ text }}</ro>
+  <li :class="classLink">
+    <router-link :to="link">{{ text }}</router-link>
   </li>
 </template>
 
@@ -17,6 +17,14 @@ export default {
       type: String,
       required: false,
       default: '',
+    },
+    classLink: {
+      type: String,
+      required: true,
+      default: '',
+    },
+    classText: {
+      type: String,
     },
   },
 };
