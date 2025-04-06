@@ -16,6 +16,7 @@
               We makes every day full of energy and taste
             </div>
             <div class="preview__subtitle">Want to try our beans?</div>
+
             <a href="./coffeepage.html" class="preview__btn">More</a>
           </div>
         </div>
@@ -49,8 +50,21 @@
         </div>
       </div>
     </section>
-    <!--best-cards-->
-
+    <!--best-->
+    <section class="best">
+      <div class="container">
+        <div class="title">Our best</div>
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="best__wrapper">
+              <ProductCard />
+              <ProductCard />
+              <ProductCard />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--footer-->
   </main>
 </template>
@@ -59,6 +73,30 @@ import NavBarComponent from '@/components/NavBarComponent.vue';
 import ProductCard from '@/components/ProductCard.vue';
 export default {
   components: { NavBarComponent, ProductCard },
+  data() {
+    return {
+      bestsellers: [
+        {
+          id: 0,
+          name: 'AROMISTICO Coffee 1kg',
+          price: 10.73,
+          image: 'coffee-1.jpg',
+        },
+        {
+          id: 1,
+          name: 'BRASIL Monkey',
+          price: 15.99,
+          image: 'coffee-2.jpg',
+        },
+        {
+          id: 2,
+          name: 'ASERTYB Coffee',
+          price: 6.99,
+          image: 'coffee-3.jpg',
+        },
+      ],
+    };
+  },
 };
 </script>
 <style>
