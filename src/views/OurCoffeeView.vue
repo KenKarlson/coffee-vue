@@ -71,6 +71,7 @@
                 :name="card.name"
                 :price="card.price"
                 :image="card.image"
+                :country="card.country"
               />
             </div>
           </div>
@@ -91,45 +92,45 @@ export default {
       coffee: [
         {
           id: 0,
-          name: '',
+          name: 'Rerum autem',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: '',
+          country: 'Abrikosiya',
         },
         {
           id: 1,
-          name: '',
+          name: 'Aqwqwerty',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: '',
+          country: 'Redretya',
         },
         {
           id: 2,
-          name: '',
+          name: 'Surtyus',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: '',
+          country: 'Tnglia',
         },
         {
           id: 3,
-          name: '',
+          name: 'Shtreust',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: '',
+          country: 'Dorchinland',
         },
         {
           id: 4,
-          name: '',
+          name: 'Frutiki',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: '',
+          country: 'Sibiria',
         },
         {
           id: 5,
-          name: '',
+          name: 'Fifting',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: '',
+          country: 'Lifirpul',
         },
       ],
     };
