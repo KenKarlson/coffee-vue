@@ -56,4 +56,24 @@ export default {
 };
 </script>
 <style lang="scss">
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-size: 12px;
+  font-weight: normal;
+  color: #999999;
+  letter-spacing: 0.04em;
+  padding: 10px;
+  margin-bottom: 0;
+  width: 4px;
+  height: 100%;
+  border-left: 2px solid orangered;
+  &__item {
+    &:not(:last-child)::after {
+      content: '/';
+      padding: 0 10px;
+    }
+  }
+}
 </style>

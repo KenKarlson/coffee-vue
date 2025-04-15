@@ -19,18 +19,21 @@
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
+            <img
+              class="beanslogo"
+              src="@/assets/logo/Beans_logo_dark.svg"
+              alt="Beans logo"
+            />
             <div class="shop__text">
-              Extremity sweetness difficult behaviour he of. On disposal of as
-              landlord horrible.
+              Extremity sweetness difficult behaviour he of. On disposal of as landlord
+              horrible.
               <br /><br />
-              Afraid at highly months do things on at. Situation recommend
-              objection do intention<br />
+              Afraid at highly months do things on at. Situation recommend objection do
+              intention<br />
               so questions. <br />
-              As greatly removed calling pleased improve an. Last ask him cold
-              feel<br />
-              met spot shy want. Children me laughing we prospect answered
-              followed. At it went<br />
+              As greatly removed calling pleased improve an. Last ask him cold feel<br />
+              met spot shy want. Children me laughing we prospect answered followed. At it
+              went<br />
               is song that held help face.
             </div>
           </div>
@@ -40,7 +43,12 @@
           <div class="col-lg-4 offset-2">
             <form action="#" class="shop__search">
               <label class="shop__search-label" for="filter">Looking for</label>
-              <input id="filter" type="text" placeholder="start typing here..." class="shop__search-input" />
+              <input
+                id="filter"
+                type="text"
+                placeholder="start typing here..."
+                class="shop__search-input"
+              />
             </form>
           </div>
           <div class="col-lg-4">
@@ -57,12 +65,13 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <ShopCard :name="coffee[0].name" :price="coffee[0].price" :image="coffee[0].image" />
-              <ShopCard :name="coffee[1].name" :price="coffee[1].price" :image="coffee[1].image" />
-              <ShopCard :name="coffee[2].name" :price="coffee[2].price" :image="coffee[2].image" />
-              <ShopCard :name="coffee[3].name" :price="coffee[3].price" :image="coffee[3].image" />
-              <ShopCard :name="coffee[4].name" :price="coffee[4].price" :image="coffee[4].image" />
-              <ShopCard :name="coffee[5].name" :price="coffee[5].price" :image="coffee[5].image" />
+              <ShopCard
+                v-for="card in coffee"
+                :key="card.id"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
+              />
             </div>
           </div>
         </div>
@@ -72,8 +81,8 @@
 </template>
 
 <script>
-import NavBarComponent from "@/components/NavBarComponent.vue";
-import ShopCard from "@/components/ShopCard.vue";
+import NavBarComponent from '@/components/NavBarComponent.vue';
+import ShopCard from '@/components/ShopCard.vue';
 
 export default {
   components: { NavBarComponent, ShopCard },
@@ -85,45 +94,45 @@ export default {
           name: '',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: ''
+          country: '',
         },
         {
           id: 1,
           name: '',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: ''
+          country: '',
         },
         {
           id: 2,
           name: '',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: ''
+          country: '',
         },
         {
           id: 3,
           name: '',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: ''
+          country: '',
         },
         {
           id: 4,
           name: '',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: ''
+          country: '',
         },
         {
           id: 5,
           name: '',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: ''
+          country: '',
         },
-      ]
-    }
-  }
+      ],
+    };
+  },
 };
 </script>

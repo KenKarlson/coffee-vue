@@ -58,19 +58,11 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
               <ProductCard
-                :name="bestsellers[0].name"
-                :price="bestsellers[0].price"
-                :image="bestsellers[0].image"
-              />
-              <ProductCard
-                :name="bestsellers[1].name"
-                :price="bestsellers[1].price"
-                :image="bestsellers[1].image"
-              />
-              <ProductCard
-                :name="bestsellers[2].name"
-                :price="bestsellers[2].price"
-                :image="bestsellers[2].image"
+                v-for="card in bestsellers"
+                :key="card.id"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
               />
             </div>
           </div>

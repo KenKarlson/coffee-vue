@@ -19,18 +19,21 @@
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
-            <img class="beanslogo" src="@/assets/logo/Beans_logo_dark.svg" alt="Beans logo" />
+            <img
+              class="beanslogo"
+              src="@/assets/logo/Beans_logo_dark.svg"
+              alt="Beans logo"
+            />
             <div class="shop__text">
-              Extremity sweetness difficult behaviour he of. On disposal of as
-              landlord horrible.
+              Extremity sweetness difficult behaviour he of. On disposal of as landlord
+              horrible.
               <br /><br />
-              Afraid at highly months do things on at. Situation recommend
-              objection do intention<br />
+              Afraid at highly months do things on at. Situation recommend objection do
+              intention<br />
               so questions. <br />
-              As greatly removed calling pleased improve an. Last ask him cold
-              feel<br />
-              met spot shy want. Children me laughing we prospect answered
-              followed. At it went<br />
+              As greatly removed calling pleased improve an. Last ask him cold feel<br />
+              met spot shy want. Children me laughing we prospect answered followed. At it
+              went<br />
               is song that held help face.
             </div>
           </div>
@@ -41,12 +44,14 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <ShopCard :name="goods[0].name" :price="goods[0].price" :image="goods[0].image" />
-              <ShopCard :name="goods[1].name" :price="goods[1].price" :image="goods[1].image" />
-              <ShopCard :name="goods[2].name" :price="goods[2].price" :image="goods[2].image" />
-              <ShopCard :name="goods[3].name" :price="goods[3].price" :image="goods[3].image" />
-              <ShopCard :name="goods[4].name" :price="goods[4].price" :image="goods[4].image" />
-              <ShopCard :name="goods[5].name" :price="goods[5].price" :image="goods[5].image" />
+              <ShopCard
+                v-for="card in goods"
+                :key="card.id"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
+                :country="card.country"
+              />
             </div>
           </div>
         </div>
@@ -56,10 +61,10 @@
 </template>
 
 <script>
-import NavBarComponent from "@/components/NavBarComponent.vue";
-import ShopCard from "@/components/ShopCard.vue";
+import NavBarComponent from '@/components/NavBarComponent.vue';
+import ShopCard from '@/components/ShopCard.vue';
 export default {
-  name: "ForYouPleasureView",
+  name: 'ForYouPleasureView',
   components: {
     NavBarComponent,
     ShopCard,
@@ -67,51 +72,50 @@ export default {
   data() {
     return {
       goods: [
-
         {
           id: 0,
           name: '',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: ''
+          country: 'Russia',
         },
         {
           id: 1,
           name: '',
           price: 10.73,
-          image: 'coffee-1.jpg',
-          country: ''
+          image: 'coffee-2.jpg',
+          country: 'Russia',
         },
         {
           id: 2,
           name: '',
           price: 10.73,
-          image: 'coffee-1.jpg',
-          country: ''
+          image: 'coffee-3.jpg',
+          country: 'Brazilia',
         },
         {
           id: 3,
           name: '',
           price: 10.73,
-          image: 'coffee-1.jpg',
-          country: ''
+          image: 'coffee-4.jpg',
+          country: 'Bustan',
         },
         {
           id: 4,
           name: '',
           price: 10.73,
-          image: 'coffee-1.jpg',
-          country: ''
+          image: 'coffee-2.jpg',
+          country: 'Sibiria',
         },
         {
           id: 5,
           name: '',
           price: 10.73,
           image: 'coffee-1.jpg',
-          country: ''
+          country: 'Abrikosia',
         },
-      ]
-    }
-  }
+      ],
+    };
+  },
 };
 </script>
