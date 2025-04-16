@@ -17,13 +17,15 @@
             </div>
             <div class="preview__subtitle">Want to try our beans?</div>
 
-            <a href="./coffeepage.html" class="preview__btn">More</a>
+            <a href="./coffeepage.html" class="preview__btn" @click.prevent="smoothScrol"
+              >More</a
+            >
           </div>
         </div>
       </div>
     </div>
     <!--about-->
-    <section class="about">
+    <section class="about" id="about" ref="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-6 offset-lg-3">
@@ -51,7 +53,7 @@
       </div>
     </section>
     <!--best-->
-    <section class="best">
+    <section class="best" ref="ourBest">
       <div class="container">
         <div class="title">Our best</div>
         <div class="row">
@@ -101,6 +103,20 @@ export default {
       ],
     };
   },
+  methods: {
+    smoothScrol() {
+      //console.log(this.$refs.about);
+      this.$refs.ourBest.scrollIntoView({
+        top: 0,
+        left: 0,
+        block: 'start',
+        behavior: 'smooth',
+      });
+      //window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+    },
+  },
+  mounted() {},
+  beforeUnmount() {},
 };
 </script>
 <style>

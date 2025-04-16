@@ -72,6 +72,7 @@
                 :price="card.price"
                 :image="card.image"
                 :country="card.country"
+                classItem="shop__item"
               />
             </div>
           </div>
