@@ -77,6 +77,7 @@
 <script>
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import ProductCard from '@/components/ProductCard.vue';
+import { scrollIntoView } from 'seamless-scroll-polyfill';
 export default {
   components: { NavBarComponent, ProductCard },
   data() {
@@ -105,13 +106,26 @@ export default {
   },
   methods: {
     smoothScrol() {
-      //console.log(this.$refs.about);
-      this.$refs.ourBest.scrollIntoView({
+      scrollIntoView(this.$refs.ourBest, {
         top: 0,
-        left: 0,
-        block: 'start',
+        inline: 'nearest',
         behavior: 'smooth',
+        block: 'start',
+        inline: 'start',
       });
+      // this.$refs.ourBest.scrollIntoView({
+      //   top: 0,
+      //   inline: 'nearest',
+      //   block: 'center',
+      //   behavior: 'smooth',
+      // });
+      //console.log(this.$refs.about);
+      // this.$refs.ourBest.scrollIntoView({
+      //   top: 0,
+      //   left: 0,
+      //   block: 'start',
+      //   behavior: 'smooth',
+      // });
       //window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
     },
   },
