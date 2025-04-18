@@ -62,11 +62,12 @@
             </div>
           </div>
         </div>
+        <!----catalog---->
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <ShopCard
-                v-for="card in coffee"
+                v-for="card in filteredCoffee"
                 :key="card.id"
                 :name="card.name"
                 :price="card.price"
@@ -74,15 +75,26 @@
                 :country="card.country"
                 classItem="shop__item"
               />
+              <!-- <ShopCard
+                v-for="card in filteredCoffee"
+                :key="card.id"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
+                :country="card.country"
+                classItem="shop__item"
+              /> -->
             </div>
           </div>
         </div>
+        <!---!catalog---->
       </div>
     </section>
   </main>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'; // Добавленный импорт
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import ShopCard from '@/components/ShopCard.vue';
 
@@ -90,51 +102,47 @@ export default {
   components: { NavBarComponent, ShopCard },
   data() {
     return {
-      coffee: [
-        {
-          id: 0,
-          name: 'Rerum autem',
-          price: 10.73,
-          image: 'coffee-1.jpg',
-          country: 'Abrikosiya',
-        },
-        {
-          id: 1,
-          name: 'Aqwqwerty',
-          price: 10.73,
-          image: 'coffee-1.jpg',
-          country: 'Redretya',
-        },
-        {
-          id: 2,
-          name: 'Surtyus',
-          price: 10.73,
-          image: 'coffee-1.jpg',
-          country: 'Tnglia',
-        },
-        {
-          id: 3,
-          name: 'Shtreust',
-          price: 10.73,
-          image: 'coffee-1.jpg',
-          country: 'Dorchinland',
-        },
-        {
-          id: 4,
-          name: 'Frutiki',
-          price: 10.73,
-          image: 'coffee-1.jpg',
-          country: 'Sibiria',
-        },
-        {
-          id: 5,
-          name: 'Fifting',
-          price: 10.73,
-          image: 'coffee-1.jpg',
-          country: 'Lifirpul',
-        },
-      ],
+      searchQuery: '',
+      filterCountry: null,
+      countries: ['Brazil', 'Kenya', 'Columbia'],
     };
+  },
+  computed: {
+    ...mapGetters('catalog', ['allCoffee', 'coffeeByCountry']),
+
+    filteredCoffee() {
+      let result = this.allCoffee || [];
+
+      if (this.filterCountry) {
+        result = this.coffeeByCountry(this.filterCountry) || [];
+      }
+
+      if (this.searchQuery) {
+        const query = this.searchQuery.toLowerCase();
+        result = result.filter(
+          (item) =>
+            item?.name?.toLowerCase().includes(query) ||
+            item?.country?.toLowerCase().includes(query),
+        );
+      }
+
+      return result;
+    },
+  },
+  methods: {
+    filterByCountry(country) {
+      this.filterCountry = country === this.filterCountry ? null : country;
+    },
+    onSearchInput(event) {
+      this.searchQuery = event.target.value;
+    },
+    getImagePath(imageName) {
+      try {
+        return require(`@/assets/img/${imageName}`);
+      } catch {
+        return require('@/assets/img/default-coffee.jpg');
+      }
+    },
   },
 };
 </script>

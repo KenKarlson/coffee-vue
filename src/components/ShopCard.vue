@@ -28,6 +28,14 @@ export default {
       default: 'Russia'
     }
 
+  },computed: {
+    imageSrc() {
+      try {
+        return require(`@/assets/img/${this.image}`)
+      } catch {
+        return require('@/assets/img/default-coffee.jpg')
+      }
+    }
   },
   data() {
     return {
