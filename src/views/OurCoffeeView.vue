@@ -75,15 +75,6 @@
                 :country="card.country"
                 classItem="shop__item"
               />
-              <!-- <ShopCard
-                v-for="card in filteredCoffee"
-                :key="card.id"
-                :name="card.name"
-                :price="card.price"
-                :image="card.image"
-                :country="card.country"
-                classItem="shop__item"
-              /> -->
             </div>
           </div>
         </div>
@@ -94,7 +85,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'; // Добавленный импорт
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import ShopCard from '@/components/ShopCard.vue';
 
@@ -102,47 +92,12 @@ export default {
   components: { NavBarComponent, ShopCard },
   data() {
     return {
-      searchQuery: '',
-      filterCountry: null,
-      countries: ['Brazil', 'Kenya', 'Columbia'],
     };
   },
   computed: {
-    ...mapGetters('catalog', ['allCoffee', 'coffeeByCountry']),
-
-    filteredCoffee() {
-      let result = this.allCoffee || [];
-
-      if (this.filterCountry) {
-        result = this.coffeeByCountry(this.filterCountry) || [];
-      }
-
-      if (this.searchQuery) {
-        const query = this.searchQuery.toLowerCase();
-        result = result.filter(
-          (item) =>
-            item?.name?.toLowerCase().includes(query) ||
-            item?.country?.toLowerCase().includes(query),
-        );
-      }
-
-      return result;
     },
-  },
+
   methods: {
-    filterByCountry(country) {
-      this.filterCountry = country === this.filterCountry ? null : country;
     },
-    onSearchInput(event) {
-      this.searchQuery = event.target.value;
-    },
-    getImagePath(imageName) {
-      try {
-        return require(`@/assets/img/${imageName}`);
-      } catch {
-        return require('@/assets/img/default-coffee.jpg');
-      }
-    },
-  },
 };
 </script>
