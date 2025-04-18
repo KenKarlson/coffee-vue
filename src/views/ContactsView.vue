@@ -146,7 +146,4 @@ export default {
 };
 </script>
 <style>
-*{
-  color:yellow
-}
 </style>
