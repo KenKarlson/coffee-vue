@@ -1,5 +1,5 @@
 # coffee-vue
-
+#License: Look but don't touch [=^_^=]
 ## Project setup
 ```
 npm install
