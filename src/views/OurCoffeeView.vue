@@ -91,13 +91,10 @@ import ShopCard from '@/components/ShopCard.vue';
 export default {
   components: { NavBarComponent, ShopCard },
   data() {
-    return {
-    };
+    return {};
   },
-  computed: {
-    },
+  computed: {},
 
-  methods: {
-    },
+  methods: {},
 };
 </script>
