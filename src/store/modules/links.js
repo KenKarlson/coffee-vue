@@ -12,12 +12,19 @@ const links = {
       { id: 1, text: 'For you pleasure', link: '/goodspage' },
       { id: 2, text: 'Contact us', link: '/contacts' },
     ],
+    beanslogo: 'Beans_logo_dark.svg',
   },
   mutations: {},
   actions: {},
   getters: {
     getHeaderLinks(state) {
       return { header: state.header, other: state.other };
+    },
+    getFooterLinks(state) {
+      return { footer: state.footer, other: state.other };
+    },
+    getBeanslogo(state) {
+      return state.beanslogo;
     },
   },
 };

@@ -30,31 +30,25 @@
     </div>
   </footer>
 </template>
+
+
 <script>
 import NavItem from './NavItem.vue';
 export default {
   name: 'FooterComponent',
   components: { NavItem },
-  data() {
-    return {
-      beanslogo: 'Beans_logo_dark.svg',
-      links: {
-        footer: {
-          id: 0,
-          text: '',
-          link: '/',
-          icon: 'Logo_black.svg',
-        },
-        other: [
-          { id: 1, text: 'Our coffee', link: '/our-coffee' },
-          { id: 2, text: 'For you pleasure', link: '/goodspage' },
-          { id: 3, text: 'Contact us', link: '/contacts' },
-        ],
-      },
-    };
+  computed: {
+    links() {
+      return this.$store.getters['getFooterLinks'];
+    },
+    beanslogo() {
+      return this.$store.getters['getBeanslogo'];
+    },
   },
 };
 </script>
+
+
 <style lang="scss">
 .breadcrumb {
   display: flex;

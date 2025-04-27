@@ -12,14 +12,14 @@ const catalog = {
       {
         id: 1,
         name: 'Aqwqwerty',
-        price: 9.50,
+        price: 9.5,
         image: 'coffee-2.jpg',
         country: 'Kenya',
       },
       {
         id: 2,
         name: 'Surtyus Coffee',
-        price: 10.50,
+        price: 10.5,
         image: 'coffee-3.jpg',
         country: 'Kenya',
       },
@@ -46,12 +46,13 @@ const catalog = {
       },
     ],
   },
-  mutations: {
-  },
-  actions: {
-  },
+  mutations: {},
+  actions: {},
   getters: {
-  }
+    getCatalog(state) {
+      return { coffee: state.coffee };
+    },
+  },
 };
 
 export default catalog;

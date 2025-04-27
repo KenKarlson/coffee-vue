@@ -67,12 +67,12 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <ShopCard
-                v-for="card in filteredCoffee"
-                :key="card.id"
-                :name="card.name"
-                :price="card.price"
-                :image="card.image"
-                :country="card.country"
+                v-for="coffee in catalog"
+                :key="coffee.id"
+                :name="coffee.name"
+                :price="coffee.price"
+                :image="coffee.image"
+                :country="coffee.country"
                 classItem="shop__item"
               />
             </div>
@@ -90,11 +90,10 @@ import ShopCard from '@/components/ShopCard.vue';
 
 export default {
   components: { NavBarComponent, ShopCard },
-  data() {
-    return {};
+  computed: {
+    catalog() {
+      return this.$store.getters['getCatalog'];
+    },
   },
-  computed: {},
-
-  methods: {},
 };
 </script>
