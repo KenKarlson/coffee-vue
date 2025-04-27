@@ -1,9 +1,17 @@
 const catalog = {
   namespaced: true,
   state: {
-    coffee: [
+    items: [
+      // переименовываем coffee в items для ясности
       {
         id: 0,
+        name: 'Rerum autem',
+        price: 12.73,
+        image: 'coffee-1.jpg',
+        country: 'Brazil',
+      },
+      {
+        id: 6,
         name: 'Rerum autem',
         price: 12.73,
         image: 'coffee-1.jpg',
@@ -44,14 +52,24 @@ const catalog = {
         image: 'coffee-1.jpg',
         country: 'Columbia',
       },
+      {
+        id: 7,
+        name: 'Rerum autem',
+        price: 12.73,
+        image: 'coffee-1.jpg',
+        country: 'Brazil',
+      },
+      {
+        id: 8,
+        name: 'Rerum Autem',
+        price: 12.73,
+        image: 'coffee-3.jpg',
+        country: 'Brazil',
+      },
     ],
   },
-  mutations: {},
-  actions: {},
   getters: {
-    getCatalog(state) {
-      return { coffee: state.coffee };
-    },
+    getItems: (state) => state.items, // простой геттер
   },
 };
 
