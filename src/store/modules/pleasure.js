@@ -46,8 +46,6 @@ const pleasure = {
       },
     ],
   },
-  mutations: {},
-  actions: {},
   getters: {
     getGoodsCoffee: (state) => state.goods, //Упрастим)) опять))))
   },

@@ -64,6 +64,7 @@
 <script>
 import NavBarComponent from '@/components/NavBarComponent.vue';
 import ShopCard from '@/components/ShopCard.vue';
+
 export default {
   name: 'ForYouPleasureView',
   components: {
@@ -72,7 +73,7 @@ export default {
   },
   computed: {
     goods() {
-      return this.$store.state['pleasure/getGoodsCoffee'];
+      return this.$store.getters['pleasure/getGoodsCoffee']; // :)) gbpltw,kz
     },
   },
 };
