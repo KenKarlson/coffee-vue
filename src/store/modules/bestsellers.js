@@ -29,3 +29,4 @@ const bestsellers = {
     getBestCoffee: (state) => state.bestsCards, //Упгастить и получить
   },
 };
+export default bestsellers; //Тадам... експорт решает фсе )))

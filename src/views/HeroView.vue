@@ -88,26 +88,9 @@ export default {
   methods: {
     smoothScrol() {
       scrollIntoView(this.$refs.ourBest, {
-        top: 0,
-        inline: 'nearest',
         behavior: 'smooth',
         block: 'start',
-        inline: 'start',
       });
-      // this.$refs.ourBest.scrollIntoView({
-      //   top: 0,
-      //   inline: 'nearest',
-      //   block: 'center',
-      //   behavior: 'smooth',
-      // });
-      //console.log(this.$refs.about);
-      // this.$refs.ourBest.scrollIntoView({
-      //   top: 0,
-      //   left: 0,
-      //   block: 'start',
-      //   behavior: 'smooth',
-      // });
-      //window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
     },
   },
   mounted() {},
