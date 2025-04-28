@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import catalog from './modules/catalog';
 import links from './modules/links';
 import pleasure from './modules/pleasure';
+import bestsellers from './modules/bestsellers';
 
 Vue.use(Vuex);
 
@@ -11,6 +12,7 @@ const store = new Vuex.Store({
     links,
     catalog,
     pleasure,
+    bestsellers,
   },
 });
 
