@@ -1,7 +1,7 @@
 const bestsellers = {
   namespaced: true,
   state: {
-    bestCards: [
+    bestsCards: [
       {
         id: 0,
         name: 'AROMISTICO Coffee 1kg',

@@ -82,7 +82,7 @@ export default {
   components: { NavBarComponent, ProductCard },
   computed: {
     bestsellers() {
-      return this.$store.getters['bestsellers/getBestCoffee']; // :)) gbpltw,kz
+      return this.$store.getters['bestsellers/getBestCoffee']; // :(
     },
   },
   methods: {
