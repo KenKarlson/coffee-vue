@@ -47,10 +47,7 @@
               <ShopCard
                 v-for="card in goods"
                 :key="card.id"
-                :name="card.name"
-                :price="card.price"
-                :image="card.image"
-                :country="card.country"
+                :card = "card"
                 classItem="shop__item"
               />
             </div>

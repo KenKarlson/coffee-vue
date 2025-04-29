@@ -1,33 +1,19 @@
 <template>
-  <div class="shop__item">
-    <img :src="require(`@/assets/img/${image}`)" :alt="image" />
-    <div class="shop__item-title">{{ name }}</div>
-    <div class="shop__item-country">{{ country }}</div>
-    <div class="shop__item-price">{{ price }}$</div>
+  <div class="shop__item" @click="onEmmit(card.id)">
+    <img :src="require(`@/assets/img/${card.image}`)" :alt="card.image" />
+    <div class="shop__item-title">{{ card.name }}</div>
+    <div class="shop__item-country">{{ card.country }}</div>
+    <div class="shop__item-price">{{ card.price }}$</div>
   </div>
 </template>
 <script>
 export default {
   props: {
-    // здесь объявляются наши пропсы :)
-    name: {
-      type: String,
-      required: true
-    },
-    price: {
-      type: Number,
-      required: true
-    },
-    image: {
-      type: String,
-      required: true,
-    },
-    country: {
-      type: String,
-      required: false,
-      default: 'Russia'
+    // здесь объявляются наши пропсы :) Уже нет))))
+    card: {
+      type: Object,
+      require: true,
     }
-
   },computed: {
     imageSrc() {
       try {
@@ -40,6 +26,11 @@ export default {
   data() {
     return {
       // здесь объявляются наши реактивные данные
+    }
+  },
+  methods: {
+    onEmmit(id){
+      console.log('Click to: ' + id +' id.');
     }
   }
 }

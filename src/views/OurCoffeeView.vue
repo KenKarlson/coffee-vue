@@ -69,10 +69,7 @@
               <ShopCard
                 v-for="item in items"
                 :key="item.id"
-                :name="item.name"
-                :price="item.price"
-                :image="item.image"
-                :country="item.country"
+                :card = "item"
                 classItem="shop__item"
               />
             </div>
