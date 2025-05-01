@@ -69,7 +69,7 @@
               <ShopCard
                 v-for="item in items"
                 :key="item.id"
-                :card = "item"
+                :card="item"
                 classItem="shop__item"
               />
             </div>
@@ -94,3 +94,5 @@ export default {
   },
 };
 </script>
+
+//1234567890
