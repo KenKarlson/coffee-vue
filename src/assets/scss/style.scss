@@ -35,3 +35,8 @@ body {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+p {
+  margin-block: 1lh;
+  padding: 1px 1lh;
+  padding: 1em; /* fallback для динозавров */
+}
