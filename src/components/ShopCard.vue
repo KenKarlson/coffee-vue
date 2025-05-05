@@ -14,12 +14,13 @@ export default {
       type: Object,
       require: true,
     }
-  },computed: {
+  },
+  computed: {
     imageSrc() {
       try {
-        return require(`@/assets/img/${this.image}`)
+        return require(`@/assets/img/${this.image}`);
       } catch {
-        return require('@/assets/img/default-coffee.jpg')
+        return require('@/assets/img/default-coffee.jpg');
       }
     }
   },

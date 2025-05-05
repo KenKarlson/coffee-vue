@@ -1,6 +1,6 @@
 //Only first page!
 <template>
-  <div class="best__item">
+  <div class="best__item" @click="onEmmet(card.id)">
     <img :src="require(`@/assets/img/${card.image}`)" :alt="card.image" />
     <div class="best__item-title">{{ card.name }}</div>
     <div class="best__item-price">{{ card.price }}$</div>
@@ -17,5 +17,11 @@ export default {
       },
     },
   },
+  methods:{
+    onEmmet(id){
+      console.log('Click to product id: '+ id);
+      this.$emit('onNavigate', id);
+    }
+  }
 };
 </script>

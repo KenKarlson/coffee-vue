@@ -63,6 +63,7 @@
                 v-for="card in bestsellers"
                 :key="card.id"
                 :card = "card"
+                @onNavigate="navigate"
               />
             </div>
           </div>
@@ -90,6 +91,10 @@ export default {
         block: 'start',
       });
     },
+    navigate(id){
+      console.log('Navigate id' + id);
+
+    }
   },
   mounted() {},
   beforeUnmount() {},
